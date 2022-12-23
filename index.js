@@ -3,7 +3,8 @@ require('dotenv').config();
 const { json } = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes/routes');
+const userRoute = require('./routes/userRoute');
+const postRoute = require('./routes/postRoute');
 const mongoString = process.env.DATABASE_URL;
 
 mongoose.connect(mongoString);
@@ -20,7 +21,8 @@ database.once('connected', () => {
 const app = express();
 
 app.use(express.json());
-app.use('/api', routes);
+app.use('/user', userRoute);
+app.use('/post', postRoute);
 
 const port = process.env.PORT || 3000
 

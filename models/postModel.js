@@ -1,37 +1,26 @@
 const { default: mongoose } = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-    userId : {
+const postSchema = mongoose.Schema({
+    postId : {
         required : true,
         type : String
     },
-    
-    name : {
+    picUrl : {
         required : true,
         type : String
     },
-
-    
-    email : {
-        required : true,
-        type : String
-    },
-
-    password : {
-        required : true,
-        type : String
-    },
-    
-    profilePic : {
+    description : {
         required : false,
         type : String
     },
-
-    moodTags : {
+    datePublished : {
+        required : true,
+        type : String
+    },
+    tags : {
         required : false,
         type : [String]
     },
-
 })
 
-module.exports = mongoose.model('User' , userSchema)
+module.exports = mongoose.model('Post' , postSchema)
