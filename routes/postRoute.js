@@ -55,7 +55,6 @@ router.post("/post", async (req, res) => {
     seconds;
 
   const data = new Post({
-    userId: req.body.userId,
     postId: postId,
     picUrl: req.body.picUrl,
     description: req.body.description,
