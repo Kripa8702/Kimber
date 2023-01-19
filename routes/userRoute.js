@@ -45,7 +45,7 @@ router.post( '/post' , async (req, res) => {
 
     const data = new User({
         userId : userId,
-        name : req.body.name,
+        username : req.body.username,
         email : req.body.email,
         password : req.body.password,
         profilePic : req.body.profilePic,

@@ -13,9 +13,17 @@ const postSchema = mongoose.Schema({
         required : true,
         type : String
     },
+    label : {
+        required : false,
+        type : String
+    },
     description : {
         required : false,
         type : String
+    },
+    likes : {
+        required : false,
+        type : [String]
     },
     datePublished : {
         required : true,

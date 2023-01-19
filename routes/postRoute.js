@@ -58,7 +58,9 @@ router.post("/post", async (req, res) => {
     userId: req.body.userId,
     postId: postId,
     picUrl: req.body.picUrl,
+    label: req.body.label,
     description: req.body.description,
+    likes: [],
     datePublished: datePublished,
     tags: req.body.tags,
   });
