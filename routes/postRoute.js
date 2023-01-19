@@ -30,7 +30,7 @@ router.get("/getOne/:id", async (req, res) => {
 //Post Method
 router.post("/post", async (req, res) => {
   const randomNo = uuidv4();
-  const postId = `post${randomNo}`;
+  const postId = `post-${randomNo}`;
   const dateObj = new Date();
 
   const date = ("0" + dateObj.getDate()).slice(-2);

@@ -41,7 +41,7 @@ router.get('/getOne/:id' , async (req, res) => {
 router.post( '/post' , async (req, res) => {
 
     const randomNo = uuidv4();
-    const userId = `user${randomNo}`;
+    const userId = `user-${randomNo}`;
 
     const data = new User({
         userId : userId,
