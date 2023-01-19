@@ -23,7 +23,7 @@ const postSchema = mongoose.Schema({
     },
     likes : {
         required : false,
-        type : String
+        type : [String]
     },
     datePublished : {
         required : true,
