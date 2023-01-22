@@ -162,7 +162,7 @@ router.patch("/update/:id", async (req, res) => {
 router.delete("/delete/:id", async (req, res) => {
   try {
     const data = await User.findOneAndDelete({ userId: req.params.id });
-    res.send(`Document ${data.name} has been deleted..`);
+    res.send(`Document ${data.username} has been deleted..`);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
