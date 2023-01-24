@@ -22,9 +22,10 @@ const userSchema = new mongoose.Schema({
         type : String
     }, 
     
-    // token : {
-    //     type : String
-    // },
+    about : {
+        required : false,
+        type : String
+    },
     
     profilePic : {
         required : false,
