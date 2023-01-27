@@ -35,7 +35,7 @@ router.get("/getOne/:id", async (req, res) => {
 //Register route
 router.post("/register", async (req, res) => {
   try {
-    const { username, email, password, profilePic } = req.body;
+    const { fullName, username, email, password, profilePic } = req.body;
 
     if (!(username && email && password)) {
       res.status(400).send("Please enter the required fields");
@@ -57,6 +57,7 @@ router.post("/register", async (req, res) => {
 
     const data = new User({
       userId: userId,
+      fullName: fullName,
       username: username,
       email: email.toLowerCase(),
       password: encryptedPassword,

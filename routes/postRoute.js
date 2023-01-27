@@ -27,6 +27,18 @@ router.get("/getOne/:id", async (req, res) => {
   }
 });
 
+//Get By User ID Method
+router.get("/getByUser/:id", async (req, res) => {
+  try {
+    const data = await Post.find({
+      userId: req.params.id,
+    });
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 //Post Method
 router.post("/post", async (req, res) => {
   const randomNo = uuidv4();
